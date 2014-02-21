@@ -45,6 +45,6 @@
     "url": "http://www.opensource.org/licenses/MIT"
   },
   "dependencies": {
-    "consolidate": "~0.10.0"
+    "co-render": "~0.0.1"
   }
 }
