@@ -1,7 +1,7 @@
 /**
  * Dependencies
  */
-var swig = require('swig');
+var consolidate = require('consolidate');
 var http = require('http');
 
 /**
@@ -19,34 +19,35 @@ module.exports = errors;
 function errors(opts) {
   opts = opts || {};
 
-  // template
-  var path = opts.template || __dirname + '/errors.html';
-  var render = swig.compileFile(path);
+  // Template
+  var template = opts.template || __dirname + '/errors.html';
+  var engine = opts.engine || 'swig';
 
-  // env
+  // Environment
   var env = process.env.NODE_ENV || 'development';
 
   return function *errors(next){
     try {
       yield next;
-      if (null == this.status) this.throw(404);
+      if (this.status === null) this.throw(404);
     }
-    catch (err) {
-      this.status = err.status || 500;
+    catch (error) {
+      this.status = error.status || 500;
 
       // Error event
-      this.app.emit('error', err, this);
+      this.app.emit('error', error, this);
 
       // Accepted types
       switch (this.accepts('html', 'json')) {
         case 'json':
-          if ('development' == env) this.body = { error: err.message }
-          else if (err.expose) this.body = { error: err.message }
-          else this.body = { error: http.STATUS_CODES[this.status] }
+          if (env === 'development')
+            this.body = { error: error.message };
+          else
+            this.body = { error: http.STATUS_CODES[this.status] }
           break;
 
         default:
-          this.body = render({
+          consolidate[engine](template, {
             env: env,
             ctx: this,
             request: this.request,
@@ -55,6 +56,8 @@ function errors(opts) {
             stack: err.stack,
             status: err.status,
             code: err.code
+          }, function(err, html) {
+            this.body = (err) ? err.message : html;
           });
           break;
       }
