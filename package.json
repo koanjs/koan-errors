@@ -1,7 +1,7 @@
 {
   "name": "koan-errors",
   "description": "Koa.js error handling middleware for Koan.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/bredikhin/koan-errors",
   "keywords": [
     "koa",
