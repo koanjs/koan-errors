@@ -1,0 +1,55 @@
+{
+  "name": "koan-errors",
+  "description": "Koa.js error handling middleware for Koan.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/bredikhin/koan-errors",
+  "keywords": [
+    "koa",
+    "koajs",
+    "koa.js",
+    "web",
+    "web-framework",
+    "framework",
+    "mvc",
+    "app",
+    "application",
+    "generators",
+    "es6",
+    "harmony",
+    "koan",
+    "koanjs",
+    "koan.js",
+    "boilerplate",
+    "error",
+    "errors",
+    "handling",
+    "handler",
+    "404",
+    "500"
+  ],
+  "devDependencies": {
+    "koan": "~0.0.8",
+    "mocha": "~1.17.0",
+    "supervisor": "~0.5.6"
+  },
+  "engines": {
+    "node": ">= 0.11.3"
+  },
+  "main": "./lib/index",
+  "files": [
+    "index.js",
+    "errors.html"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com:bredikhin/koan-errors.git"
+  },
+  "bugs": {
+    "url": "http://github.com/bredikhin/koan-errors/issues"
+  },
+  "author": "Ruslan Bredikhin",
+  "license": {
+    "type": "MIT",
+    "url": "http://www.opensource.org/licenses/MIT"
+  }
+}
