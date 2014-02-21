@@ -1,7 +1,7 @@
 /**
  * Dependencies
  */
-var consolidate = require('consolidate');
+var render = require('co-render');
 var http = require('http');
 
 /**
@@ -29,7 +29,7 @@ function errors(opts) {
   return function *errors(next){
     try {
       yield next;
-      if (this.status === null) this.throw(404);
+      if (this.status == null) this.throw(404);
     }
     catch (error) {
       this.status = error.status || 500;
@@ -40,27 +40,27 @@ function errors(opts) {
       // Accepted types
       switch (this.accepts('html', 'json')) {
         case 'json':
-          if (env === 'development')
+          if (env == 'development')
             this.body = { error: error.message };
           else
             this.body = { error: http.STATUS_CODES[this.status] }
           break;
 
         default:
-          consolidate[engine](template, {
+          this.body = yield render(template, {
             env: env,
             ctx: this,
             request: this.request,
             response: this.response,
-            error: err.message,
-            stack: err.stack,
-            status: err.status,
-            code: err.code
-          }, function(err, html) {
-            this.body = (err) ? err.message : html;
+            error: error.message,
+            stack: error.stack,
+            status: error.status,
+            code: error.code,
+            engine: engine
           });
           break;
       }
     }
   }
 }
+
