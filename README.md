@@ -1,5 +1,8 @@
 # Koa.js error handling middleware for Koan.js
 
+[![Build Status](https://travis-ci.org/bredikhin/koan-errors.png?branch=master)](https://travis-ci.org/bredikhin/koan-errors)
+[![Dependency Status](https://gemnasium.com/bredikhin/koan-errors.png)](https://gemnasium.com/bredikhin/koan-errors)
+
 Based on [`koa-error`](https://github.com/koajs/error).
 
 ## Contributions
