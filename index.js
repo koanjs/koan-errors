@@ -29,7 +29,8 @@ function errors(opts) {
   return function *errors(next){
     try {
       yield next;
-      if (this.status == null) this.throw(404);
+      if (this.status == null)
+        this.throw(404);
     }
     catch (error) {
       this.status = error.status || 500;
@@ -54,7 +55,7 @@ function errors(opts) {
             response: this.response,
             error: error.message,
             stack: error.stack,
-            status: error.status,
+            status: this.status,
             code: error.code,
             engine: engine
           });
