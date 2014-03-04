@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/bredikhin/koan-errors.png?branch=master)](https://travis-ci.org/bredikhin/koan-errors)
 [![Dependency Status](https://gemnasium.com/bredikhin/koan-errors.png)](https://gemnasium.com/bredikhin/koan-errors)
+[![Coverage Status](https://coveralls.io/repos/bredikhin/koan-errors/badge.png)](https://coveralls.io/r/bredikhin/koan-errors)
 
 Based on [`koa-error`](https://github.com/koajs/error).
 
