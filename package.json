@@ -32,7 +32,8 @@
     "istanbul": "https://github.com/gotwarlost/istanbul/archive/harmony.tar.gz",
     "coveralls": "~2.8.0",
     "pre-commit": "0.0.4",
-    "koa": "~0.5.0"
+    "koa": "~0.5.0",
+    "ejs": "~0.8.5"
   },
   "scripts": {
     "test": "PORT=9999 NODE_ENV=test node --harmony ./node_modules/istanbul/lib/cli.js cover ./node_modules/.bin/_mocha --report lcovonly -- --recursive test/**/*.js -R spec",
