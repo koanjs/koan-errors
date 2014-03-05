@@ -41,10 +41,10 @@ function errors(opts) {
       // Accepted types
       switch (this.accepts('html', 'json')) {
         case 'json':
-          if (env == 'development')
+          if (env === 'development')
             this.body = { error: error.message };
           else
-            this.body = { error: http.STATUS_CODES[this.status] }
+            this.body = { error: http.STATUS_CODES[this.status] + ' (' + this.status + ')' }
           break;
 
         default:
