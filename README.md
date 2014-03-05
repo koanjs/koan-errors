@@ -2,7 +2,9 @@
 
 [![Build Status](https://travis-ci.org/bredikhin/koan-errors.png?branch=master)](https://travis-ci.org/bredikhin/koan-errors)
 [![Dependency Status](https://gemnasium.com/bredikhin/koan-errors.png)](https://gemnasium.com/bredikhin/koan-errors)
+[![Code Climate](https://codeclimate.com/github/bredikhin/koan-errors.png)](https://codeclimate.com/github/bredikhin/koan-errors)
 [![Coverage Status](https://coveralls.io/repos/bredikhin/koan-errors/badge.png?branch=master)](https://coveralls.io/r/bredikhin/koan-errors?branch=master)
+[![NPM version](https://badge.fury.io/js/koan-errors.png)](http://badge.fury.io/js/koan-errors)
 
 Based on [`koa-error`](https://github.com/koajs/error).
 
