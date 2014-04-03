@@ -1,8 +1,8 @@
 {
   "name": "koan-errors",
-  "description": "Koa.js error handling middleware for Koan.js",
-  "version": "0.0.3",
-  "homepage": "https://github.com/bredikhin/koan-errors",
+  "description": "Koa.js error handling middleware",
+  "version": "0.0.4",
+  "homepage": "https://github.com/koanjs/koan-errors",
   "keywords": [
     "koa",
     "koajs",
@@ -47,10 +47,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com:bredikhin/koan-errors.git"
+    "url": "git://github.com:koanjs/koan-errors.git"
   },
   "bugs": {
-    "url": "http://github.com/bredikhin/koan-errors/issues"
+    "url": "https://github.com/koanjs/koan-errors/issues"
   },
   "author": "Ruslan Bredikhin",
   "license": {
