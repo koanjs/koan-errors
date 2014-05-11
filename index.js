@@ -29,7 +29,7 @@ function errors(opts) {
   return function *errors(next){
     try {
       yield next;
-      if (this.status == null)
+      if ((this.status == 404)||(!this.response.body))
         this.throw(404);
     }
     catch (error) {

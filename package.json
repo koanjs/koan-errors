@@ -1,7 +1,7 @@
 {
   "name": "koan-errors",
   "description": "Koa.js error handling middleware",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "homepage": "https://github.com/koanjs/koan-errors",
   "keywords": [
     "koa",
@@ -26,12 +26,12 @@
   },
   "devDependencies": {
     "mocha": "^1.18.2",
-    "should": "^3.3.0",
-    "supertest": "^0.10.0",
+    "should": "^3.3.1",
+    "supertest": "^0.12.0",
     "istanbul": "https://github.com/gotwarlost/istanbul/archive/harmony.tar.gz",
     "coveralls": "^2.10.0",
     "pre-commit": "0.0.7",
-    "koa": "^0.5.5",
+    "koa": "^0.6.0",
     "ejs": "^1.0.0"
   },
   "scripts": {
