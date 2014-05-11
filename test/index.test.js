@@ -26,7 +26,7 @@ describe('Error middleware', function() {
       .get('/nowhere')
       .expect(/Custom error: 404!/)
       .end(function(err, res) {
-        should(err).not.be.ok;
+        should(err).not.be.Error;
 
         done();
       });
@@ -39,7 +39,7 @@ describe('Error middleware', function() {
       .get('/nowhere')
       .expect(/Error - 404/)
       .end(function(err, res) {
-        should(err).not.be.ok;
+        should(err).not.be.Error;
 
         done();
       });
@@ -52,7 +52,7 @@ describe('Error middleware', function() {
       .get('/nowhere')
       .expect(404)
       .end(function(err, res) {
-        should(err).not.be.ok;
+        should(err).not.be.Error;
 
         done();
       });
@@ -68,7 +68,7 @@ describe('Error middleware', function() {
       .get('/')
       .expect(500)
       .end(function(err, res) {
-        should(err).not.be.ok;
+        should(err).not.be.Error;
 
         done();
       });
@@ -84,7 +84,7 @@ describe('Error middleware', function() {
       .get('/nowhere')
       .expect(/Custom error: 404!/)
       .end(function(err, res) {
-        should(err).not.be.ok;
+        should(err).not.be.Error;
 
         done();
       });
@@ -103,7 +103,7 @@ describe('Error middleware', function() {
       .expect('Content-Type', /json/)
       .expect('{"error":"Internal Server Error (500)"}')
       .end(function(err, res) {
-        should(err).not.be.ok;
+        should(err).not.be.Error;
 
         done();
       });
