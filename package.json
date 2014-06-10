@@ -25,13 +25,13 @@
     "swig": "^1.3.2"
   },
   "devDependencies": {
-    "mocha": "^1.20.0",
+    "mocha": "^1.20.1",
     "should": "^4.0.1",
     "supertest": "^0.13.0",
     "istanbul": "https://github.com/gotwarlost/istanbul/archive/harmony.tar.gz",
     "coveralls": "^2.10.0",
     "pre-commit": "0.0.7",
-    "koa": "^0.6.2",
+    "koa": "^0.7.0",
     "ejs": "^1.0.0"
   },
   "scripts": {
